@@ -46,7 +46,7 @@ class Dashboard extends React.Component {
           <TripPreview title='My Great Trip' city='Tokyo' start='Sep 28' end='Oct 8' url='test' />
           <TripPreview title='My Lesser Trip' city='Boston' start='Nov 10' end='Nov 13' url='test' />
           <TripPreview title='Kenji!' city='San Francisco' start='Dec 5' end='Dec 9' url='test' />
-          <TripPreview title='Again' city='Tokyo' start='Sep 28' end='Oct 8' url='test' />
+          <TripPreview new={true} />
         </div>
 
       </div>
