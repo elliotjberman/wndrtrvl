@@ -1,0 +1,24 @@
+// Variables
+
+$offblack: #100c29;
+$yellow: #fdf47a;
+
+.trip-preview {
+  cursor: pointer;
+  padding: 20px;
+  transition: 200ms;
+
+  &:hover {
+    background-color: $offblack;
+    color: $yellow;
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+}

@@ -1,9 +1,10 @@
 require('../styles/site.scss');
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-class Main extends React.Component {
+class Home extends React.Component {
 
   constructor() {
     super();
@@ -69,7 +70,7 @@ class Main extends React.Component {
     const loggedInSpan = this.state.loggedIn ? <span>Oh hi {this.state.first_name}</span> : '';
 
     return (
-      <div id='landing'>
+      <div id='landing' className='content'>
         <div id='header' className='row'>
           <h1>Travelle Boi {loggedInSpan}</h1>
           <h4><span>You</span> <span>use</span> <span>it</span> <span>to</span> <span>book</span> <span>trippes</span></h4>
@@ -93,8 +94,14 @@ class Main extends React.Component {
             }
           </div>
           <div className='grid-3 landing-square'>
+            {
+              this.state.loggedIn ?
+              <div>
+                <h3><Link to="/dashboard">My Trippes</Link></h3>
+              </div>
+              : ''
+            }
           </div>
-          <div className='grid-3 landing-square'></div>
           <div className='grid-3 landing-square'></div>
           <div className='grid-3 landing-square'></div>
         </div>
@@ -104,4 +111,4 @@ class Main extends React.Component {
   }
 }
 
-export default Main;
+export default Home;
