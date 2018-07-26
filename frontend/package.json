@@ -1,0 +1,27 @@
+{
+  "name": "wndrtrvl-frontend",
+  "version": "0.0.1",
+  "description": "Travelle",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elliotjberman/wndrtrvl.git"
+  },
+  "author": "Elliot Berman, Aaron Behr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elliotjberman/wndrtrvl/issues"
+  },
+  "homepage": "https://github.com/elliotjberman/wndrtrvl#readme",
+  "devDependencies": {
+    "webpack": "^4.16.2",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "npm": "^6.2.0"
+  }
+}
