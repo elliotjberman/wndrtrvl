@@ -15,7 +15,12 @@ class Day(models.Model):
     trip = models.ForeignKey(Trip, on_delete=models.CASCADE)
     date = models.DateField()
 
-class Destination(models.Model):
+class Visit(models.Model):
+    day = models.ForeignKey(Day, on_delete=models.CASCADE)
+    start = models.TimeField()
+    end = models.TimeField()
+
+class Place(models.Model):
     unique_id = models.CharField(max_length=128)
     name = models.CharField(max_length=128)
-    day = models.ForeignKey(Day, null=True, blank=True, on_delete=models.SET_NULL)
+    visit = models.ForeignKey(Visit, null=True, blank=True, on_delete=models.SET_NULL)
