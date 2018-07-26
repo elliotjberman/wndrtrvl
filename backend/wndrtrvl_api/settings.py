@@ -135,5 +135,9 @@ REST_FRAMEWORK = {
 }
 
 CORS_ORIGIN_WHITELIST = (
-    'localhost:3000',
+    'localhost:8080',
 )
+
+JWT_AUTH = {
+    'JWT_RESPONSE_PAYLOAD_HANDLER': 'wndrtrvl_api.utils.my_jwt_response_handler'
+}
