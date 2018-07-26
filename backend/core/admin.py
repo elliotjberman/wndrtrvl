@@ -10,10 +10,14 @@ class TripAdmin(admin.ModelAdmin):
 class DayAdmin(admin.ModelAdmin):
     pass
 
-class DestinationAdmin(admin.ModelAdmin):
+class VisitAdmin(admin.ModelAdmin):
+    pass
+
+class PlaceAdmin(admin.ModelAdmin):
     pass
 
 admin.site.register(Traveler, TravelerAdmin)
 admin.site.register(Trip, TripAdmin)
 admin.site.register(Day, DayAdmin)
-admin.site.register(Destination, DestinationAdmin)
+admin.site.register(Visit, VisitAdmin)
+admin.site.register(Place, PlaceAdmin)
