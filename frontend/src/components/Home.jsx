@@ -15,7 +15,20 @@ class Main extends React.Component {
   }
 
   componentDidMount = () => {
-
+    if (this.state.loggedIn) {
+      let config = {
+        headers: {
+          Authorization: `JWT ${localStorage.getItem('token')}`
+        }
+      }
+      axios.get('http://localhost:8000/core/current_user/', config).then(
+        (res) => {
+          this.setState({
+            first_name: res.data.first_name
+          })
+        }
+      )
+    }
   }
 
   emailChange = (event) => {
