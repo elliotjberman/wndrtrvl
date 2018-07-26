@@ -1,0 +1,48 @@
+$offblack: #100c29;
+
+* {
+  font-family: "Helvetica"
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #8ad88a;
+}
+
+#landing {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  float: left;
+  transition: 1000ms;
+
+  &.black {
+    background-color: $offblack;
+  }
+
+  h1 {
+    color: $offblack;
+    font-weight: bold;
+    letter-spacing: -6px;
+    font-size: 120px;
+    padding-bottom: 10px;
+    border-bottom: 15px solid $offblack;
+    margin-top: 20px;
+  }
+  h4 {
+    color: $offblack;
+    font-weight: bold;
+    font-size: 40px;
+    letter-spacing: -3px;
+
+    span {
+      transition: 200ms;
+      cursor: pointer;
+      &:hover {
+        letter-spacing: 10px;
+        color: #b1ad76;
+      }
+    }
+  }
+}
